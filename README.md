@@ -68,10 +68,40 @@ Gas levels: **0–199** = 🟢 Clean · **200–499** = 🟠 Moderate · **500+*
 2. Search: `com.fazecast:jSerialComm` → select latest → OK
 
 **Step 3 — Run the GUI**
-1. Open `java/src/leddimmer/MainWindow.java`
+1. Open `java-app/src/leddimmer/MainWindow.java`
 2. Right-click → Run `MainWindow.main()`
 3. Select your COM port → Connect → done!
 
 ---
 
 ## Folder Structure
+
+project/
+├── arduino/
+│   ├── sketch.ino
+│   └── diagram.json
+├── java-app/
+│   └── src/leddimmer/
+│       ├── MainWindow.java
+│       └── SerialManager.java
+├── docs/
+│   ├── index.html
+│   ├── images/
+│   └── screenshots/
+├── assets/
+└── README.md
+
+
+---
+
+## Links
+
+| | URL |
+|-|-----|
+| 🔗 GitHub Repo | [github.com/rayani2001/LED-Dimmer-Air-Quality-Monitor-Java-based-IoT-project](https://github.com/rayani2001/LED-Dimmer-Air-Quality-Monitor-Java-based-IoT-project) |
+| 🌐 GitHub Pages | [rayani2001.github.io/LED-Dimmer-Air-Quality-Monitor-Java-based-IoT-project](https://rayani2001.github.io/LED-Dimmer-Air-Quality-Monitor-Java-based-IoT-project/) |
+| 🔬 Wokwi Sim | [wokwi.com/projects/463165937757162497](https://wokwi.com/projects/463165937757162497) |
+
+---
+
+*Riga Nordic University · Course Projects 2: Java · 2026*
