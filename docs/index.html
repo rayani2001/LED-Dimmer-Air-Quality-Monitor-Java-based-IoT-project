@@ -24,34 +24,29 @@ html{scroll-behavior:smooth}
 body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(6,9,15,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem}
+nav{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(6,9,15,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem}
 .nav-logo{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--cyan);letter-spacing:.08em}
 .nav-links{display:flex;gap:.15rem;list-style:none}
 .nav-links a{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--muted);padding:.3rem .7rem;border-radius:4px;transition:.2s;letter-spacing:.04em}
 .nav-links a:hover{color:var(--cyan);background:rgba(0,229,255,.08)}
 @media(max-width:700px){.nav-links{display:none}}
 
-/* HERO */
 #home{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding-top:54px}
 .grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(0,229,255,.03)1px,transparent 1px),linear-gradient(90deg,rgba(0,229,255,.03)1px,transparent 1px);background-size:50px 50px}
 .glow1{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(0,229,255,.07)0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%)}
-.glow2{position:absolute;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(255,107,53,.05)0%,transparent 70%);top:20%;right:5%}
 .hero{position:relative;text-align:center;max-width:860px;padding:2rem}
-.hero-chip{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--cyan);background:rgba(0,229,255,.1);border:1px solid rgba(0,229,255,.25);border-radius:100px;padding:.3rem .9rem;margin-bottom:1.8rem;letter-spacing:.09em;animation:fadeIn .7s ease both}
-.hero h1{font-size:clamp(2.8rem,6vw,5.2rem);font-weight:700;line-height:1.05;margin-bottom:1.4rem;animation:fadeIn .7s .1s ease both}
+.hero-chip{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--cyan);background:rgba(0,229,255,.1);border:1px solid rgba(0,229,255,.25);border-radius:100px;padding:.3rem .9rem;margin-bottom:1.8rem;letter-spacing:.09em}
+.hero h1{font-size:clamp(2.8rem,6vw,5.2rem);font-weight:700;line-height:1.05;margin-bottom:1.4rem}
 .hero h1 .cyan{background:linear-gradient(135deg,var(--cyan),#0099ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .hero h1 .plus{color:var(--orange);-webkit-text-fill-color:var(--orange)}
-.hero-sub{font-size:1.05rem;color:var(--muted);margin-bottom:2.5rem;line-height:1.65;animation:fadeIn .7s .2s ease both}
-.badges{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center;animation:fadeIn .7s .3s ease both}
+.hero-sub{font-size:1.05rem;color:var(--muted);margin-bottom:2.5rem;line-height:1.65}
+.badges{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center}
 .badge{display:inline-flex;align-items:center;gap:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;padding:.4rem .85rem;border-radius:6px;border:1px solid;font-weight:500}
 .bc{color:var(--cyan);border-color:rgba(0,229,255,.25);background:rgba(0,229,255,.06)}
 .bo{color:var(--orange);border-color:rgba(255,107,53,.25);background:rgba(255,107,53,.06)}
-.bg{color:var(--green);border-color:rgba(57,255,20,.2);background:rgba(57,255,20,.05)}
+.bg-badge{color:var(--green);border-color:rgba(57,255,20,.2);background:rgba(57,255,20,.05)}
 .br{color:var(--red);border-color:rgba(255,59,92,.25);background:rgba(255,59,92,.05)}
-@keyframes fadeIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 
-/* SECTIONS */
 .section{padding:6rem 2rem;max-width:1080px;margin:0 auto}
 .divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0 2rem}
 .sec-tag{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--cyan);letter-spacing:.14em;text-transform:uppercase;margin-bottom:.6rem;display:flex;align-items:center;gap:.6rem}
@@ -59,7 +54,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(6,9,15,.9);ba
 .sec-title{font-size:clamp(1.9rem,3.5vw,2.7rem);font-weight:700;line-height:1.1;margin-bottom:.85rem}
 .sec-desc{color:var(--muted);font-size:.95rem;max-width:560px;line-height:1.7;margin-bottom:2.8rem}
 
-/* CARDS */
 .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.6rem;transition:border-color .2s}
 .card:hover{border-color:rgba(0,229,255,.2)}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
@@ -73,13 +67,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(6,9,15,.9);ba
 .ft{font-size:.95rem;font-weight:600;margin-bottom:.45rem}
 .fd{font-size:.83rem;color:var(--muted);line-height:1.6}
 
-/* PHOTOS */
-.photo-box{aspect-ratio:16/10;background:#0a0f16;border:2px dashed var(--border);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:.75rem;transition:border-color .2s;cursor:pointer}
-.photo-box:hover{border-color:rgba(0,229,255,.3)}
+/* PHOTOS GRID */
+.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:680px){.photo-grid{grid-template-columns:1fr}}
+.photo-item img{width:100%;border-radius:12px;border:1px solid var(--border);object-fit:cover;aspect-ratio:16/10}
+.photo-box{aspect-ratio:16/10;background:#0a0f16;border:2px dashed var(--border);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:.75rem}
 .photo-box .pi{font-size:2.2rem;opacity:.35}
 .photo-cap{font-size:.75rem;color:var(--muted);text-align:center;margin-top:.6rem;font-family:'JetBrains Mono',monospace}
 
-/* TABLES */
 .tw{overflow-x:auto;border-radius:12px;border:1px solid var(--border);margin-bottom:1.8rem}
 table{width:100%;border-collapse:collapse;font-size:.84rem}
 thead tr{background:#0b1018}
@@ -89,11 +84,9 @@ tr:last-child td{border-bottom:none}
 tbody tr:hover{background:rgba(0,229,255,.02)}
 code{font-family:'JetBrains Mono',monospace;font-size:.8em;background:rgba(0,229,255,.08);color:var(--cyan);padding:.12em .45em;border-radius:4px}
 
-/* CODE BLOCK */
 .cb{background:#040608;border:1px solid var(--border);border-radius:10px;padding:1.4rem;font-family:'JetBrains Mono',monospace;font-size:.78rem;line-height:1.75;overflow-x:auto;margin-bottom:1.4rem}
 .cm{color:#3a5060}.kw{color:#ff6b9d}.fn{color:var(--cyan)}.st{color:var(--green)}.nm{color:var(--orange)}
 
-/* TIMELINE */
 .tl{position:relative;padding-left:1.8rem}
 .tl::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:2px;background:linear-gradient(to bottom,var(--cyan),var(--orange),var(--green),var(--yellow))}
 .tl-item{position:relative;margin-bottom:1.8rem;padding-left:1.4rem}
@@ -108,7 +101,6 @@ code{font-family:'JetBrains Mono',monospace;font-size:.8em;background:rgba(0,229
 .tl-name{font-size:.95rem;font-weight:600;margin-bottom:.2rem}
 .tl-desc{font-size:.83rem;color:var(--muted);line-height:1.55}
 
-/* LINK CARDS */
 .lc{display:flex;align-items:center;gap:1.1rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem;transition:all .2s}
 .lc:hover{border-color:rgba(0,229,255,.35);transform:translateY(-2px)}
 .li{width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
@@ -116,9 +108,16 @@ code{font-family:'JetBrains Mono',monospace;font-size:.8em;background:rgba(0,229
 .lu{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--cyan)}
 .lsub{font-size:.78rem;color:var(--muted);margin-top:.15rem}
 
-/* SUBSECTION */
 .stitle{font-size:1rem;font-weight:600;margin:1.8rem 0 .9rem;display:flex;align-items:center;gap:.5rem}
 .stitle::before{content:'';width:4px;height:1em;background:var(--cyan);border-radius:2px}
+
+/* SIMULATION EMBED */
+.sim-wrap{border-radius:14px;overflow:hidden;border:1px solid var(--border);margin-top:1.5rem}
+.sim-wrap iframe{width:100%;height:500px;border:none;display:block}
+
+/* REFLECTION */
+.reflection-box{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--cyan);border-radius:0 12px 12px 0;padding:1.5rem;margin-bottom:1rem}
+.reflection-box p{color:var(--muted);font-size:.9rem;line-height:1.7}
 
 footer{border-top:1px solid var(--border);padding:1.8rem 2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted)}
 </style>
@@ -135,15 +134,14 @@ footer{border-top:1px solid var(--border);padding:1.8rem 2rem;text-align:center;
     <li><a href="#software">Software</a></li>
     <li><a href="#protocol">Protocol</a></li>
     <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#reflection">Reflection</a></li>
     <li><a href="#links">Links</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
 <section id="home" style="min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding-top:54px;padding-left:0;padding-right:0;max-width:100%">
   <div class="grid-bg"></div>
   <div class="glow1"></div>
-  <div class="glow2"></div>
   <div class="hero">
     <div class="hero-chip">🎓 Course Projects 2: Java · Riga Nordic University</div>
     <h1><span class="cyan">LED Dimmer</span> <span class="plus">+</span><br>Air Quality Monitor</h1>
@@ -151,7 +149,7 @@ footer{border-top:1px solid var(--border);padding:1.8rem 2rem;text-align:center;
     <div class="badges">
       <span class="badge bc">👤 Rayani Minoli W.D. Fernando</span>
       <span class="badge bo">🔧 Arduino Uno</span>
-      <span class="badge bg">☕ Java Swing</span>
+      <span class="badge bg-badge">☕ Java Swing</span>
       <span class="badge br">💨 MQ Gas Sensor</span>
     </div>
   </div>
@@ -159,171 +157,143 @@ footer{border-top:1px solid var(--border);padding:1.8rem 2rem;text-align:center;
 
 <div class="divider"></div>
 
-<!-- OVERVIEW -->
 <section class="section" id="overview">
   <div class="sec-tag">01 — Overview</div>
   <h2 class="sec-title">What does this project do?</h2>
-  <p class="sec-desc">A physical Arduino circuit connected to a Java desktop app — control an LED's brightness from your computer and monitor air quality in real-time, all through a USB cable.</p>
+  <p class="sec-desc">A physical Arduino circuit connected to a Java desktop app. Control an LED's brightness from your computer and monitor air quality in real-time — all through a USB cable.</p>
   <div class="g2">
-    <div class="card"><div class="icon-box ib-o">💡</div><div class="ft">LED Brightness Control</div><div class="fd">A smooth slider controls a red LED from 0–100% using Arduino PWM on Pin 9. Includes OFF and FULL shortcut buttons.</div></div>
-    <div class="card"><div class="icon-box ib-c">🌬️</div><div class="ft">Air Quality Monitoring</div><div class="fd">MQ gas sensor reads analog values (0–1023) every 2 seconds. The GUI shows live readings with a color-coded alert system.</div></div>
-    <div class="card"><div class="icon-box ib-g">🔌</div><div class="ft">Serial Communication</div><div class="fd">Java and Arduino talk over USB at 9600 baud using a simple text protocol. Commands like <code>BRIGHT:75</code> and <code>GAS:487</code> keep it readable.</div></div>
-    <div class="card"><div class="icon-box ib-r">🚨</div><div class="ft">Gas Alert System</div><div class="fd">When gas exceeds 500, the bar turns red and shows "HIGH LEVEL DETECTED". Levels 200–499 show orange as a warning.</div></div>
+    <div class="card"><div class="icon-box ib-o">💡</div><div class="ft">LED Brightness Control</div><div class="fd">A smooth slider controls a red LED from 0–100% using Arduino PWM on Pin 9. Includes OFF and FULL shortcut buttons with live glowing preview.</div></div>
+    <div class="card"><div class="icon-box ib-c">🌬️</div><div class="ft">Air Quality Monitoring</div><div class="fd">MQ gas sensor reads analog values (0–1023) every 2 seconds. The GUI shows live readings with a color-coded progress bar and alert system.</div></div>
+    <div class="card"><div class="icon-box ib-g">🔌</div><div class="ft">Serial Communication</div><div class="fd">Java and Arduino talk over USB at 9600 baud using a simple text protocol. Commands like <code>BRIGHT:75</code> and <code>GAS:487</code> keep it readable and easy to debug.</div></div>
+    <div class="card"><div class="icon-box ib-r">🚨</div><div class="ft">Gas Alert System</div><div class="fd">When gas exceeds 500, the bar turns red and shows "HIGH LEVEL DETECTED". Levels 200–499 show orange as a warning. Below 200 shows green — clean air.</div></div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- PHOTOS -->
 <section class="section" id="photos">
   <div class="sec-tag">02 — Photos</div>
   <h2 class="sec-title">Project Gallery</h2>
-  <p class="sec-desc">Screenshots of the Java GUI and photos of the physical hardware setup. Replace placeholders with your real images.</p>
-  <div class="g2">
+  <p class="sec-desc">Screenshots of the Java GUI and photos of the physical hardware setup.</p>
+  <div class="photo-grid">
     <div>
-      <div class="photo-box"><span class="pi">🖥️</span><span>Java GUI Screenshot</span><span style="font-size:.65rem;opacity:.45">Replace with your screenshot</span></div>
+      <div class="photo-box"><span class="pi">🖥️</span><span>Java GUI Screenshot</span><span style="font-size:.65rem;opacity:.45">Add after Thursday</span></div>
       <div class="photo-cap">// Java Swing GUI — LED control + gas monitor</div>
     </div>
     <div>
-      <div class="photo-box"><span class="pi">📷</span><span>Hardware / Breadboard Photo</span><span style="font-size:.65rem;opacity:.45">Replace with your photo</span></div>
-      <div class="photo-cap">// Arduino Uno + MQ sensor + LED on breadboard</div>
+      <div class="photo-box"><span class="pi">📷</span><span>Hardware Setup Photo</span><span style="font-size:.65rem;opacity:.45">Add after Thursday</span></div>
+      <div class="photo-cap">// Arduino + MQ sensor + LED on breadboard</div>
     </div>
     <div>
-      <div class="photo-box"><span class="pi">🔴</span><span>LED at Full Brightness</span><span style="font-size:.65rem;opacity:.45">Replace with your photo</span></div>
-      <div class="photo-cap">// LED glowing at 100% (PWM 255)</div>
+      <div class="photo-box"><span class="pi">🔴</span><span>LED at Full Brightness</span><span style="font-size:.65rem;opacity:.45">Add after Thursday</span></div>
+      <div class="photo-cap">// LED glowing at 100% PWM</div>
     </div>
     <div>
-      <div class="photo-box"><span class="pi">🔬</span><span>Wokwi Simulation Screenshot</span><span style="font-size:.65rem;opacity:.45">Replace with Wokwi screenshot</span></div>
-      <div class="photo-cap">// Simulation running in Wokwi online</div>
+      <div class="photo-box"><span class="pi">💻</span><span>Serial Monitor Output</span><span style="font-size:.65rem;opacity:.45">Add after Thursday</span></div>
+      <div class="photo-cap">// READY + GAS readings in serial log</div>
     </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- HARDWARE -->
 <section class="section" id="hardware">
   <div class="sec-tag">03 — Hardware</div>
-  <h2 class="sec-title">Components &amp; Wiring</h2>
+  <h2 class="sec-title">Components & Wiring</h2>
   <p class="sec-desc">All components used and how they are connected.</p>
-  <div class="stitle">Components</div>
+  <div class="stitle">Bill of Materials</div>
   <div class="tw"><table>
-    <thead><tr><th>#</th><th>Component</th><th>Model / Spec</th><th>Purpose</th></tr></thead>
+    <thead><tr><th>#</th><th>Component</th><th>Model</th><th>Purpose</th></tr></thead>
     <tbody>
       <tr><td>1</td><td>Microcontroller</td><td>Arduino Uno (Keyestudio)</td><td>Main control board</td></tr>
-      <tr><td>2</td><td>LED</td><td>Red LED, 5mm</td><td>Brightness output</td></tr>
+      <tr><td>2</td><td>LED</td><td>Red LED 5mm</td><td>Brightness output</td></tr>
       <tr><td>3</td><td>Resistor</td><td>220 Ω</td><td>Current limiting for LED</td></tr>
       <tr><td>4</td><td>Gas Sensor</td><td>MQ Gas Sensor (Keyestudio blue)</td><td>Air quality measurement</td></tr>
       <tr><td>5</td><td>Breadboard</td><td>Standard 830-point</td><td>Prototyping base</td></tr>
-      <tr><td>6</td><td>Jumper Wires</td><td>Male-to-Male, various</td><td>Connections</td></tr>
+      <tr><td>6</td><td>Jumper Wires</td><td>Male-to-Male</td><td>Connections</td></tr>
       <tr><td>7</td><td>USB Cable</td><td>USB-A to USB-B</td><td>Arduino ↔ PC serial + power</td></tr>
     </tbody>
   </table></div>
-  <div class="stitle">Wiring</div>
+  <div class="stitle">Wiring / Circuit</div>
   <div class="tw"><table>
     <thead><tr><th>From</th><th>→</th><th>To</th><th>Note</th></tr></thead>
     <tbody>
-      <tr><td><code>Arduino Pin 9</code></td><td>→</td><td><code>220Ω Resistor</code> → <code>LED Anode (+)</code></td><td>PWM brightness</td></tr>
+      <tr><td><code>Arduino Pin 9</code></td><td>→</td><td><code>220Ω</code> → <code>LED Anode (+)</code></td><td>PWM brightness control</td></tr>
       <tr><td><code>Arduino GND</code></td><td>→</td><td><code>LED Cathode (−)</code></td><td>LED ground</td></tr>
       <tr><td><code>MQ Sensor GND</code></td><td>→</td><td><code>Arduino GND</code></td><td>Sensor ground</td></tr>
       <tr><td><code>MQ Sensor VCC</code></td><td>→</td><td><code>Arduino 5V</code></td><td>Sensor power</td></tr>
       <tr><td><code>MQ Sensor AO</code></td><td>→</td><td><code>Arduino A0</code></td><td>Analog reading</td></tr>
-      <tr><td><code>MQ Sensor DO</code></td><td>→</td><td><em style="color:var(--muted)">Not connected</em></td><td>Digital output unused</td></tr>
+      <tr><td><code>MQ Sensor DO</code></td><td>—</td><td><em style="color:var(--muted)">Not connected</em></td><td>Unused</td></tr>
     </tbody>
   </table></div>
 </section>
 
 <div class="divider"></div>
 
-<!-- SOFTWARE -->
 <section class="section" id="software">
   <div class="sec-tag">04 — Software</div>
-  <h2 class="sec-title">Arduino &amp; Java Code</h2>
-  <p class="sec-desc">Two software components: an Arduino sketch running on-device, and a Java Swing desktop GUI on your PC.</p>
+  <h2 class="sec-title">Arduino & Java GUI</h2>
+  <p class="sec-desc">Two software components: an Arduino sketch and a Java Swing desktop application.</p>
   <div class="g2" style="margin-bottom:2rem">
-    <div class="card"><div class="icon-box ib-o">🔧</div><div class="ft">Arduino Sketch (sketch.ino)</div><div class="fd" style="line-height:1.8">• Sends <code>READY</code> on boot<br>• <code>BRIGHT:n</code> → sets LED via <code>analogWrite()</code><br>• <code>STATUS</code> → replies <code>GAS:n</code><br>• Auto-sends gas every 2 seconds</div></div>
-    <div class="card"><div class="icon-box ib-c">☕</div><div class="ft">Java Swing GUI</div><div class="fd" style="line-height:1.8">• <code>MainWindow.java</code> — all GUI panels<br>• <code>SerialManager.java</code> — jSerialComm port handler<br>• Slider + OFF/FULL + gas bar + serial log</div></div>
-  </div>
-  <div class="stitle">Arduino Sketch (sketch.ino)</div>
-  <div class="cb">
-<span class="cm">// LED Dimmer + Air Quality Monitor</span>
-<span class="cm">// Rayani Minoli W.D. Fernando — Riga Nordic University</span>
-
-<span class="kw">const int</span> LED_PIN = <span class="nm">9</span>;
-<span class="kw">const int</span> GAS_PIN = A<span class="nm">0</span>;
-<span class="kw">unsigned long</span> lastGasTime = <span class="nm">0</span>;
-String inputBuffer = <span class="st">""</span>;
-
-<span class="kw">void</span> <span class="fn">setup</span>() {
-  Serial.<span class="fn">begin</span>(<span class="nm">9600</span>);
-  <span class="fn">pinMode</span>(LED_PIN, OUTPUT);
-  <span class="fn">analogWrite</span>(LED_PIN, <span class="nm">0</span>);
-  Serial.<span class="fn">println</span>(<span class="st">"READY"</span>);
-}
-
-<span class="kw">void</span> <span class="fn">loop</span>() {
-  <span class="kw">if</span> (<span class="fn">millis</span>() - lastGasTime >= <span class="nm">2000</span>) {
-    Serial.<span class="fn">print</span>(<span class="st">"GAS:"</span>);
-    Serial.<span class="fn">println</span>(<span class="fn">analogRead</span>(GAS_PIN));
-    lastGasTime = <span class="fn">millis</span>();
-  }
-  <span class="kw">while</span> (Serial.<span class="fn">available</span>()) {
-    <span class="kw">char</span> c = (<span class="kw">char</span>)Serial.<span class="fn">read</span>();
-    <span class="kw">if</span> (c == <span class="st">'\n'</span>) { processCmd(inputBuffer); inputBuffer = <span class="st">""</span>; }
-    <span class="kw">else</span> inputBuffer += c;
-  }
-}
-
-<span class="kw">void</span> <span class="fn">processCmd</span>(String cmd) {
-  cmd.<span class="fn">trim</span>();
-  <span class="kw">if</span> (cmd.<span class="fn">startsWith</span>(<span class="st">"BRIGHT:"</span>)) {
-    <span class="kw">int</span> pct = <span class="fn">constrain</span>(cmd.<span class="fn">substring</span>(<span class="nm">7</span>).<span class="fn">toInt</span>(), <span class="nm">0</span>, <span class="nm">100</span>);
-    <span class="fn">analogWrite</span>(LED_PIN, <span class="fn">map</span>(pct, <span class="nm">0</span>, <span class="nm">100</span>, <span class="nm">0</span>, <span class="nm">255</span>));
-    Serial.<span class="fn">print</span>(<span class="st">"OK:"</span>); Serial.<span class="fn">println</span>(pct);
-  } <span class="kw">else if</span> (cmd == <span class="st">"STATUS"</span>) {
-    Serial.<span class="fn">print</span>(<span class="st">"GAS:"</span>); Serial.<span class="fn">println</span>(<span class="fn">analogRead</span>(GAS_PIN));
-  }
-}</div>
-  <div class="stitle">Wokwi Simulation</div>
-  <div class="card" style="display:flex;align-items:center;gap:1rem">
-    <span style="font-size:1.8rem">🔬</span>
-    <div>
-      <div class="ft">Try it online — no hardware needed</div>
-      <div class="fd">Full circuit simulated in Wokwi. Test the serial protocol and LED PWM without any physical components.</div>
-      <a href="ADD_YOUR_WOKWI_LINK_HERE" style="display:inline-flex;align-items:center;gap:.5rem;margin-top:.7rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--cyan);border:1px solid rgba(0,229,255,.25);padding:.35rem .8rem;border-radius:6px">🔗 Open Wokwi Simulation</a>
+    <div class="card">
+      <div class="icon-box ib-o">🔧</div>
+      <div class="ft">Arduino Sketch</div>
+      <div class="fd" style="line-height:1.8">
+        • Sends <code>READY</code> on boot<br>
+        • <code>BRIGHT:n</code> → sets LED PWM<br>
+        • <code>STATUS</code> → replies <code>GAS:n</code><br>
+        • Auto-sends gas every 2 seconds<br>
+        • <a href="https://github.com/rayani2001/LED-Dimmer-Air-Quality-Monitor-Java-based-IoT-project/blob/main/arduino/sketch.ino" style="color:var(--cyan)">View sketch.ino →</a>
+      </div>
     </div>
+    <div class="card">
+      <div class="icon-box ib-c">☕</div>
+      <div class="ft">Java Swing GUI</div>
+      <div class="fd" style="line-height:1.8">
+        • <code>MainWindow.java</code> — GUI panels<br>
+        • <code>SerialManager.java</code> — serial port<br>
+        • Slider + OFF/FULL buttons<br>
+        • Color-coded gas progress bar<br>
+        • <a href="https://github.com/rayani2001/LED-Dimmer-Air-Quality-Monitor-Java-based-IoT-project/tree/main/java-app/src/leddimmer" style="color:var(--cyan)">View Java source →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="stitle">Wokwi Web Simulation</div>
+  <p style="color:var(--muted);font-size:.9rem;margin-bottom:1rem">Try the circuit online — no hardware needed. Press ▶ Play to start.</p>
+  <div class="sim-wrap">
+    <iframe src="https://wokwi.com/projects/463165937757162497" allowfullscreen></iframe>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- PROTOCOL -->
 <section class="section" id="protocol">
   <div class="sec-tag">05 — Protocol</div>
-  <h2 class="sec-title">Serial Command Reference</h2>
+  <h2 class="sec-title">Serial Communication</h2>
   <p class="sec-desc">All messages between Java and Arduino over USB serial at 9600 baud.</p>
   <div class="stitle">Java → Arduino</div>
   <div class="tw"><table>
     <thead><tr><th>Command</th><th>Example</th><th>Trigger</th><th>Response</th></tr></thead>
     <tbody>
-      <tr><td><code>BRIGHT:n</code></td><td><code>BRIGHT:75</code></td><td>Slider moved to 75%</td><td><code>OK:75</code></td></tr>
-      <tr><td><code>BRIGHT:0</code></td><td><code>BRIGHT:0</code></td><td>OFF button pressed</td><td><code>OK:0</code></td></tr>
-      <tr><td><code>BRIGHT:100</code></td><td><code>BRIGHT:100</code></td><td>FULL button pressed</td><td><code>OK:100</code></td></tr>
+      <tr><td><code>BRIGHT:n</code></td><td><code>BRIGHT:75</code></td><td>Slider moved</td><td><code>OK:75</code></td></tr>
+      <tr><td><code>BRIGHT:0</code></td><td><code>BRIGHT:0</code></td><td>OFF button</td><td><code>OK:0</code></td></tr>
+      <tr><td><code>BRIGHT:100</code></td><td><code>BRIGHT:100</code></td><td>FULL button</td><td><code>OK:100</code></td></tr>
       <tr><td><code>STATUS</code></td><td><code>STATUS</code></td><td>Manual request</td><td><code>GAS:487</code></td></tr>
     </tbody>
   </table></div>
   <div class="stitle">Arduino → Java</div>
   <div class="tw"><table>
-    <thead><tr><th>Message</th><th>Example</th><th>When Sent</th><th>Java Action</th></tr></thead>
+    <thead><tr><th>Message</th><th>When</th><th>Java Action</th></tr></thead>
     <tbody>
-      <tr><td><code>READY</code></td><td><code>READY</code></td><td>Arduino boots</td><td>Log to serial panel</td></tr>
-      <tr><td><code>OK:n</code></td><td><code>OK:75</code></td><td>After BRIGHT command</td><td>Logged</td></tr>
-      <tr><td><code>GAS:n</code></td><td><code>GAS:487</code></td><td>Every 2s (auto) or STATUS</td><td>Update gas panel</td></tr>
+      <tr><td><code>READY</code></td><td>Arduino boots</td><td>Logged</td></tr>
+      <tr><td><code>OK:n</code></td><td>After BRIGHT</td><td>Logged</td></tr>
+      <tr><td><code>GAS:n</code></td><td>Every 2s auto</td><td>Update gas panel</td></tr>
     </tbody>
   </table></div>
-  <div class="stitle">Gas Alert Thresholds</div>
+  <div class="stitle">Gas Alert Levels</div>
   <div class="tw"><table>
-    <thead><tr><th>Range</th><th>Bar Colour</th><th>Status Label</th></tr></thead>
+    <thead><tr><th>Range</th><th>Color</th><th>Status</th></tr></thead>
     <tbody>
       <tr><td>0 – 199</td><td><span style="color:#39ff14">● Green</span></td><td>Clean Air</td></tr>
       <tr><td>200 – 499</td><td><span style="color:#ffd60a">● Orange</span></td><td>Moderate</td></tr>
@@ -334,7 +304,6 @@ String inputBuffer = <span class="st">""</span>;
 
 <div class="divider"></div>
 
-<!-- TIMELINE -->
 <section class="section" id="timeline">
   <div class="sec-tag">06 — Timeline</div>
   <h2 class="sec-title">Project Milestones</h2>
@@ -343,26 +312,41 @@ String inputBuffer = <span class="st">""</span>;
     <div class="tl-item"><div class="tl-date">March 31, 2025</div><div class="tl-name">📋 Project Proposal</div><div class="tl-desc">Submitted project idea. Defined hardware components, software architecture, and serial protocol design.</div></div>
     <div class="tl-item"><div class="tl-date">April 15, 2025</div><div class="tl-name">🔧 Prototype</div><div class="tl-desc">Arduino sketch working with LED PWM. Basic Java GUI with serial connection. Breadboard wiring complete.</div></div>
     <div class="tl-item"><div class="tl-date">April 30, 2025</div><div class="tl-name">✅ Final Version</div><div class="tl-desc">MQ sensor integrated. Gas alert system complete. Wokwi simulation created. GitHub Pages published.</div></div>
-    <div class="tl-item"><div class="tl-date">May 20, 2025</div><div class="tl-name">🎓 Submission Deadline</div><div class="tl-desc">Final project submission including all code, README, and this GitHub Pages website.</div></div>
+    <div class="tl-item"><div class="tl-date">May 20, 2025</div><div class="tl-name">🎓 Submission Deadline</div><div class="tl-desc">Final submission with all code, README, and GitHub Pages documentation.</div></div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- LINKS -->
-<section class="section" id="links">
-  <div class="sec-tag">07 — Links</div>
-  <h2 class="sec-title">Project Resources</h2>
-  <p class="sec-desc">Source code, simulation, and documentation.</p>
-  <div class="g2">
-    <a href="ADD_YOUR_GITHUB_REPO_LINK_HERE" class="lc"><div class="li" style="background:rgba(0,229,255,.1)">⚙️</div><div><div class="lt">GitHub Repository</div><div class="lu">github.com/your-username/repo-name</div><div class="lsub">Arduino sketch, Java source code, README</div></div></a>
-    <a href="ADD_YOUR_GITHUB_PAGES_LINK_HERE" class="lc"><div class="li" style="background:rgba(57,255,20,.08)">🌐</div><div><div class="lt">GitHub Pages (This Site)</div><div class="lu">your-username.github.io/repo-name</div><div class="lsub">Project documentation website</div></div></a>
-    <a href="ADD_YOUR_WOKWI_LINK_HERE" class="lc"><div class="li" style="background:rgba(255,107,53,.1)">🔬</div><div><div class="lt">Wokwi Simulation</div><div class="lu">wokwi.com/projects/your-project-id</div><div class="lsub">Run the circuit online without hardware</div></div></a>
-    <a href="ADD_YOUR_GITHUB_README_LINK_HERE" class="lc"><div class="li" style="background:rgba(255,59,92,.08)">📄</div><div><div class="lt">README Documentation</div><div class="lu">github.com/your-username/repo-name#readme</div><div class="lsub">Setup instructions, wiring, protocol</div></div></a>
+<section class="section" id="reflection">
+  <div class="sec-tag">07 — Reflection</div>
+  <h2 class="sec-title">What I Learned</h2>
+  <p class="sec-desc">A short reflection on the development process, challenges, and results.</p>
+  <div class="reflection-box">
+    <p>The most challenging part of this project was establishing stable serial communication between Java and Arduino. Understanding how to parse incoming serial data character by character using a line buffer was a key learning moment.</p>
+  </div>
+  <div class="reflection-box" style="border-left-color:var(--orange)">
+    <p>Working with PWM to control LED brightness taught me how analog-like output can be achieved on a digital microcontroller. Mapping the 0–100% slider value to 0–255 PWM range using Arduino's map() function was a practical and satisfying solution.</p>
+  </div>
+  <div class="reflection-box" style="border-left-color:var(--green)">
+    <p>What works successfully in the final version: the LED responds instantly to slider changes, the gas sensor sends reliable readings every 2 seconds, and the Java GUI updates the color-coded progress bar in real time. The system demonstrates clear Java ↔ Arduino integration.</p>
   </div>
 </section>
 
-<footer>LED Dimmer + Air Quality Monitor · Rayani Minoli Warnakulasuriya Don Fernando · Riga Nordic University · Course Projects 2: Java</footer>
+<div class="divider"></div>
+
+<section class="section" id="links">
+  <div class="sec-tag">08 — Links</div>
+  <h2 class="sec-title">Project Resources</h2>
+  <div class="g2">
+    <a href="https://github.com/rayani2001/LED-Dimmer-Air-Quality-Monitor-Java-based-IoT-project" class="lc"><div class="li" style="background:rgba(0,229,255,.1)">⚙️</div><div><div class="lt">GitHub Repository</div><div class="lu">github.com/rayani2001/...</div><div class="lsub">Arduino sketch, Java source, README</div></div></a>
+    <a href="https://rayani2001.github.io/LED-Dimmer-Air-Quality-Monitor-Java-based-IoT-project/" class="lc"><div class="li" style="background:rgba(57,255,20,.08)">🌐</div><div><div class="lt">GitHub Pages</div><div class="lu">rayani2001.github.io/...</div><div class="lsub">This documentation website</div></div></a>
+    <a href="https://wokwi.com/projects/463165937757162497" class="lc"><div class="li" style="background:rgba(255,107,53,.1)">🔬</div><div><div class="lt">Wokwi Simulation</div><div class="lu">wokwi.com/projects/463165937757162497</div><div class="lsub">Run the circuit online</div></div></a>
+    <a href="https://github.com/rayani2001/LED-Dimmer-Air-Quality-Monitor-Java-based-IoT-project/blob/main/README.md" class="lc"><div class="li" style="background:rgba(255,59,92,.08)">📄</div><div><div class="lt">README</div><div class="lu">github.com/rayani2001/.../README.md</div><div class="lsub">Setup and documentation</div></div></a>
+  </div>
+</section>
+
+<footer>LED Dimmer + Air Quality Monitor · Rayani Minoli Warnakulasuriya Don Fernando · Riga Nordic University · Course Projects 2: Java · 2025</footer>
 
 </body>
 </html>
