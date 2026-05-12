@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "author": "Rayani Minoli Warnakulasuriya Don Fernando",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 80, "left": 0, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -60, "left": 220, "attrs": { "color": "red" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": -20, "left": 180, "attrs": { "value": "220" } },
+    { "type": "wokwi-gas-sensor", "id": "gas1", "top": -80, "left": -130, "attrs": {} }
+  ],
+  "connections": [
+    ["uno:9",     "r1:1",      "orange", ["h10"]],
+    ["r1:2",      "led1:A",    "orange", ["h10"]],
+    ["led1:C",    "uno:GND.0", "black",  ["v30","h-120"]],
+    ["gas1:GND",  "uno:GND.1", "black",  ["h10"]],
+    ["gas1:VCC",  "uno:5V",    "red",    ["h10"]],
+    ["gas1:AOUT", "uno:A0",    "green",  ["h10"]]
+  ],
+  "serialMonitor": { "display": "terminal", "newline": "lf" }
+}
