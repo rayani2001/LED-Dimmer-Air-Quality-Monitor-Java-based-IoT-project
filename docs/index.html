@@ -175,16 +175,40 @@ footer{border-top:1px solid var(--border);padding:1.8rem 2rem;text-align:center;
   <div class="sec-tag">02 — Photos</div>
   <h2 class="sec-title">Project Gallery</h2>
   <p class="sec-desc">Screenshots of the Java GUI and photos of the physical hardware setup.</p>
-  <div class="photo-grid">
+<div class="photo-grid" style="grid-template-columns:1fr 1fr 1fr">
     <div>
       <img src="images/gui-clean.png" style="width:100%;border-radius:12px;border:1px solid var(--border);object-fit:cover;aspect-ratio:16/10">
-      <div class="photo-cap">// GAS: 2 — Green bar, Clean Air</div>
+      <div class="photo-cap">// GAS: 2 — Green, Clean Air</div>
     </div>
     <div>
       <img src="images/gui-moderate.png" style="width:100%;border-radius:12px;border:1px solid var(--border);object-fit:cover;aspect-ratio:16/10">
-      <div class="photo-cap">// GAS: 285 — Orange bar, Moderate</div>
+      <div class="photo-cap">// GAS: 285 — Orange, Moderate</div>
     </div>
     <div>
+      <img src="images/gui-alert.png" style="width:100%;border-radius:12px;border:1px solid var(--border);object-fit:cover;aspect-ratio:16/10">
+      <div class="photo-cap">// GAS: 655 — Red, HIGH LEVEL</div>
+    </div>
+    <div>
+      <img src="images/hardware-demo.jpeg" style="width:100%;border-radius:12px;border:1px solid var(--border);object-fit:cover;aspect-ratio:16/10">
+      <div class="photo-cap">// Live hardware — LED + sensor running</div>
+    </div>
+    <div>
+      <img src="images/hardware.jpeg" style="width:100%;border-radius:12px;border:1px solid var(--border);object-fit:cover;aspect-ratio:16/10">
+      <div class="photo-cap">// Components before assembly</div>
+    </div>
+    <div>
+      <img src="images/wiring-diagram.png.png" style="width:100%;border-radius:12px;border:1px solid var(--border);object-fit:cover;aspect-ratio:16/10">
+      <div class="photo-cap">// Wiring diagram</div>
+    </div>
+    <div style="grid-column:1/3">
+      <video src="images/demo-video.mp4" controls playsinline style="width:100%;border-radius:12px;border:1px solid var(--border);aspect-ratio:16/9;object-fit:cover;background:#000"></video>
+      <div class="photo-cap">// Live demo video — LED control + sensor reading</div>
+    </div>
+    <div>
+      <img src="images/GUI.png.png" style="width:100%;border-radius:12px;border:1px solid var(--border);object-fit:cover;aspect-ratio:16/10">
+      <div class="photo-cap">// Java GUI — initial state</div>
+    </div>
+  </div>
       <img src="images/gui-alert.png" style="width:100%;border-radius:12px;border:1px solid var(--border);object-fit:cover;aspect-ratio:16/10">
       <div class="photo-cap">// GAS: 655 — Red bar, HIGH LEVEL DETECTED</div>
     </div>
